@@ -8,5 +8,6 @@ Requirements:
 To setup:
 
 1. Clone this repo
-2. Type `yarn start` in the terminal
-3. Click the link to localhost that appears
+2. Run `yarn` in the terminal
+3. Type `yarn start` in the terminal
+4. Click the link to localhost that appears

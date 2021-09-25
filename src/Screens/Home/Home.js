@@ -2,11 +2,13 @@ import React from "react";
 import "./Home.css";
 import OfferButton from "Components/OfferButton";
 import BottomBar from "Components/BottomBar";
+import Sidebar from "Components/Sidebar";
 
 function Home() {
   return (
     <div className="Home">
       <p className="headers">Offers</p>
+      <Sidebar></Sidebar>
       <div className="homeButtons">
         <OfferButton
           fruit_name="Apples"

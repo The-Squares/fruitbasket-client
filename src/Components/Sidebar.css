@@ -1,0 +1,7 @@
+.SideBar {
+  height: 84vh;
+  width: 60vw;
+  position: fixed;
+  top: 8vh;
+  background-color: var(--orange-color);
+}
