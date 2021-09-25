@@ -1,0 +1,12 @@
+.bottomBar {
+  height: 8vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--green-color);
+}

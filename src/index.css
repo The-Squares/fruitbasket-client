@@ -1,0 +1,18 @@
+* {
+  --orange-color: #e37547;
+  --green-color: #89a98c;
+  --blue-color: #86a4d4;
+  --red-color: #dd4f44;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--green-color);
+}
+
+body p {
+  margin: 0;
+  padding: 0;
+}

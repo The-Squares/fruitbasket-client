@@ -1,0 +1,14 @@
+.headers {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 5%;
+  margin-top: 5vh;
+}
+
+.homeButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}

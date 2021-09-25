@@ -1,0 +1,55 @@
+.offerBBack {
+  width: 90%;
+  height: 103px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange-color);
+  border-radius: 4px;
+  gap: 15px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.offerBBack img {
+  flex: 1;
+  width: auto;
+  height: 50%;
+}
+
+.offerBBack .offerBText {
+  font-style: "Roboto" sans-serif;
+}
+
+.offerBBack .offerBText p {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.offerBBack .offerBText .fruitName {
+  font-size: 1.5em;
+}
+
+.offerBBack .offerBButton {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.offerBBack .offerBButton button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  border-radius: 2px;
+  height: 19px;
+  width: 90%;
+  font-size: 0.7rem;
+  background-color: var(--blue-color);
+  border-style: none;
+}
