@@ -13,7 +13,7 @@ function OfferButton({ fruit_name, location, distance }) {
       </div>
       <div className="offerBButton">
         <button>Request Apple</button>
-        <button>View Offerer Info</button>
+        <button>More Info</button>
       </div>
     </div>
   );
