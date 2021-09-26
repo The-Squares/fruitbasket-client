@@ -5,3 +5,13 @@
   align-items: center;
   gap: 25px;
 }
+
+.offerButtons input {
+  margin-top: 25px;
+  width: 85vw;
+  height: 20px;
+  border: none;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}

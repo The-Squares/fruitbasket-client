@@ -10,3 +10,7 @@
   left: 0;
   background-color: var(--green-color);
 }
+
+.bottomBar img {
+  height: 80%;
+}

@@ -7,6 +7,9 @@ function Offers() {
   return (
     <div className="Offers">
       <div className="offerButtons">
+        <form>
+          <input type="text" placeholder="Search by fruit name..." />
+        </form>
         {new Array(20).fill(
           <OfferButton
             fruit_name="Apples"
