@@ -4,7 +4,7 @@ import "./MapScreen.css";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import useGeoOffers from "Hooks/useGeoOffers";
 
-const libraries = ["places"];
+const libraries = [];
 
 function Map() {
   let [lat, long] = useGeolocation();
@@ -17,9 +17,9 @@ function Map() {
 
   if (loadError) {
     console.log(loadError);
-    return "Error";
+    return <p>"Error"</p>;
   }
-  if (!isLoaded) return "Loading...";
+  if (!isLoaded) return <p>"Loading..."</p>;
 
   return (
     <div className="Map">

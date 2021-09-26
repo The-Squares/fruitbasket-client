@@ -6,7 +6,9 @@ function useGeolocation() {
   useEffect(() => {
     let setPosition = async () => {
       let position = await new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve);
+        navigator.geolocation.getCurrentPosition(resolve, (error) =>
+          alert(`Location services failed, error code: ${error.code}`)
+        );
       });
       setCoordinates([position.coords.latitude, position.coords.longitude]);
     };
