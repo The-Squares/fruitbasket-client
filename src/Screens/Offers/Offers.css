@@ -15,3 +15,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
+
+.offerButtons > :last-child {
+  margin-bottom: calc(8vh + 25px);
+}
