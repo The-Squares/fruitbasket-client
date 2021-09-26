@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import OfferButton from "Components/OfferButton";
-import BottomBar from "Components/BottomBar";
 import Sidebar from "Components/Sidebar";
 
 function Home() {
@@ -26,8 +25,6 @@ function Home() {
           distance="20 minutes away"
         ></OfferButton>
       </div>
-
-      <BottomBar></BottomBar>
     </div>
   );
 }

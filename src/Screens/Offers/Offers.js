@@ -1,7 +1,6 @@
 import React from "react";
 import "./Offers.css";
 import OfferButton from "Components/OfferButton";
-import BottomBar from "Components/BottomBar";
 
 function Offers() {
   return (
@@ -18,7 +17,6 @@ function Offers() {
           />
         )}
       </div>
-      <BottomBar></BottomBar>
     </div>
   );
 }
