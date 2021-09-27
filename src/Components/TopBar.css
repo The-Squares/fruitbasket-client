@@ -1,0 +1,24 @@
+.topBar {
+  height: 8vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--green-color);
+}
+
+.topBar img {
+  width: 50%;
+  height: auto;
+}
+
+.topBar p{
+  color: black;
+  text-align: center;
+  text-shadow: 2px 2px 2px grey;
+  font-size: 30px;
+}
