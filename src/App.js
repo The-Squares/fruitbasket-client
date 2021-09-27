@@ -8,16 +8,14 @@ import Map from "Screens/Map/MapScreen";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/offers" exact component={Offers} />
-          <Route path="/map" exact component={Map} />
-        </Switch>
-        <BottomBar></BottomBar>
-      </Router>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/offers" exact component={Offers} />
+        <Route path="/map" exact component={Map} />
+      </Switch>
+      <BottomBar></BottomBar>
+    </Router>
   );
 }
 

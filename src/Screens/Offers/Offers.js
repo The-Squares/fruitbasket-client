@@ -1,21 +1,26 @@
 import React from "react";
 import "./Offers.css";
 import OfferButton from "Components/OfferButton";
+import useOffers from "Hooks/useOffers";
+import TopBar from "Components/TopBar";
 
 function Offers() {
+  let offers = useOffers();
+
   return (
     <div className="Offers">
+      <TopBar page="Offers" />
       <div className="offerButtons">
         <form>
           <input type="text" placeholder="Search by fruit name..." />
         </form>
-        {new Array(20).fill(
+        {offers.map((offer) => (
           <OfferButton
-            fruit_name="Apples"
-            location="Beverly Hills - CA"
-            distance="5 minutes away"
+            fruit_name={offer.fruit_type}
+            location={offer.address}
+            image_url={offer.picture_url}
           />
-        )}
+        ))}
       </div>
     </div>
   );

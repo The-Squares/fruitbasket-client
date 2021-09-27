@@ -3,6 +3,7 @@ import useGeolocation from "Hooks/useGeolocation";
 import "./MapScreen.css";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import useGeoOffers from "Hooks/useGeoOffers";
+import TopBar from "Components/TopBar";
 
 const libraries = [];
 
@@ -23,6 +24,7 @@ function Map() {
 
   return (
     <div className="Map">
+      <TopBar page="Offers" />
       <GoogleMap
         id="map"
         mapContainerStyle={{ width: "100%", height: "100%" }}
