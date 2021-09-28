@@ -3,9 +3,11 @@ import "./Sidebar.css";
 import SidebarItem from "Components/SidebarItem";
 import Home from "Media/home.png";
 
-function Sidebar() {
+function Sidebar({ active }) {
+  let style = active ? { display: "block" } : { display: "none " };
+
   return (
-    <div className="SideBar">
+    <div className="SideBar" style={style}>
       <SidebarItem image={Home} text={"Home"} />
       <SidebarItem image={Home} text={"Home"} />
       <SidebarItem image={Home} text={"Home"} />

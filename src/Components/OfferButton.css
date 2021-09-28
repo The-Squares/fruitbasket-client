@@ -12,7 +12,7 @@
   -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
-.offerBBack img {
+.offerBBack .fruitImage {
   flex: 1;
   height: 50%;
   margin-left: 15px;
@@ -57,4 +57,12 @@
   font-size: 0.7rem;
   background-color: var(--blue-color);
   border-style: none;
+}
+
+.dots {
+  position: relative;
+  top: 0px;
+  right: 8px;
+  transform: translateY(-210%);
+  height: 16px;
 }

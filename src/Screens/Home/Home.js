@@ -1,16 +1,17 @@
 import React from "react";
 import "./Home.css";
 import OfferButton from "Components/OfferButton";
-import Sidebar from "Components/Sidebar";
 import Apple from "Media/appleplaceholder.png";
 import TopBar from "Components/TopBar";
 
-function Home() {
+function Home({ history }) {
   return (
     <div className="Home">
-      <TopBar page="Offers" />
-      <p className="headers">Offers</p>
-      <Sidebar></Sidebar>
+      <TopBar page="Dashboard" />
+      <p onClick={() => history.push("/offers")} className="headers">
+        Offers
+      </p>
+
       <div className="homeButtons">
         <OfferButton
           fruit_name="Apples"

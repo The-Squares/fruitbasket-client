@@ -4,4 +4,6 @@
   position: fixed;
   top: 8vh;
   background-color: var(--orange-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }

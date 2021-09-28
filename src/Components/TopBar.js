@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TopBar.css";
 import Hamburger from "Media/hamburger.png";
 import ShareIcon from "Media/shareicon.png";
-import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 function TopBar({ page }) {
+  let [sideBarActive, setActive] = useState(false);
+
   return (
     <div className="topBar">
+      <Sidebar active={sideBarActive} />
       <div className="headerLocation">
-        <Link to="/menu">
-          <img className="hamburger" src={Hamburger} alt="" />
-        </Link>
-        <p>{page}</p>
+        <img
+          className="hamburger"
+          src={Hamburger}
+          alt=""
+          onClick={() => setActive(!sideBarActive)}
+        />
+        <p className="topBarText">{page}</p>
       </div>
 
-      <Link to="/share">
-        <img className="shareIcon" src={ShareIcon} alt="" />
-      </Link>
+      <img className="shareIcon" src={ShareIcon} alt="" />
     </div>
   );
 }
