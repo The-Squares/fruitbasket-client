@@ -1,8 +1,11 @@
 import React from "react";
 import Dots from "Media/dots.svg";
 import "./OfferButton.css";
+import { useHistory } from "react-router";
 
 function OfferButton({ fruit_name, location, image_url }) {
+  const history = useHistory();
+
   return (
     <div className="offerBBack">
       <img className="fruitImage" src={image_url} alt=""></img>
@@ -12,7 +15,7 @@ function OfferButton({ fruit_name, location, image_url }) {
       </div>
       <div className="offerBButton">
         <button>Request</button>
-        <button>More Info</button>
+        <button onClick={() => history.push("/offers/1234")}>More Info</button>
       </div>
       <img className="dots" src={Dots} alt="" />
     </div>

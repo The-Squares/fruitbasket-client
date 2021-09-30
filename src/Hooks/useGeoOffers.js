@@ -5,13 +5,15 @@ function useGeoOffers(lat, long, distance = 2000) {
 
   useEffect(() => {
     const getOffers = async () => {
-      if (!lat || !long) return;
-      let response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/api/offers/location?lat=${lat}&long=${long}&distance=${distance}`
-      );
-      if (response.status !== 200) return;
-      let data = await response.json();
-      setOffers(data);
+      try {
+        if (!lat || !long) return;
+        let response = await fetch(
+          `${process.env.REACT_APP_API_BASE_URL}/api/offers/location?lat=${lat}&long=${long}&distance=${distance}`
+        );
+        if (response.status !== 200) return;
+        let data = await response.json();
+        setOffers(data);
+      } catch (e) {}
     };
 
     getOffers();

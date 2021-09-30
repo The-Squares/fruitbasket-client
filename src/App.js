@@ -6,6 +6,7 @@ import Offers from "Screens/Offers/Offers";
 import "./App.css";
 import Map from "Screens/Map/MapScreen";
 import CreateOffer from "Screens/CreateOffer/CreateOffer";
+import Offer from "Screens/Offer/Offer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/offers" exact component={Offers} />
         <Route path="/map" exact component={Map} />
         <Route path="/create-offer" exact component={CreateOffer} />
+        <Route path="/offers/:offerid" exact component={Offer} />
       </Switch>
       <BottomBar></BottomBar>
     </Router>

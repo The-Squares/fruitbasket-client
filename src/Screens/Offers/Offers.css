@@ -20,9 +20,3 @@
 .offerButtons > :last-child {
   margin-bottom: calc(8vh + 25px);
 }
-
-.plusIcon {
-  position: absolute;
-  top: calc(8vh + 5px);
-  right: 4vw;
-}

@@ -9,13 +9,13 @@ function BottomBar() {
   return (
     <div className="bottomBar">
       <Link to="/map">
-        <img src={Map} alt="" />
+        <img src={Map} alt="Map" title="Map" />
       </Link>
       <Link to="/">
-        <img src={Home} alt="" />
+        <img src={Home} alt="Home" title="Home" />
       </Link>
       <Link to="/offers">
-        <img src={Basket} alt="" />
+        <img src={Basket} alt="Offers" title="Offers" />
       </Link>
     </div>
   );

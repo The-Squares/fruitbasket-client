@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./TopBar.css";
 import Hamburger from "Media/hamburger.png";
-import ShareIcon from "Media/shareicon.png";
+import { ReactComponent as Plus } from "Media/plus.svg";
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 function TopBar({ page }) {
   let [sideBarActive, setActive] = useState(false);
@@ -14,13 +15,21 @@ function TopBar({ page }) {
         <img
           className="hamburger"
           src={Hamburger}
-          alt=""
+          alt="Sidebar"
+          title="Sidebar"
           onClick={() => setActive(!sideBarActive)}
         />
         <p className="topBarText">{page}</p>
       </div>
 
-      <img className="shareIcon" src={ShareIcon} alt="" />
+      <Link to="/create-offer">
+        <Plus
+          className="plusIcon"
+          style={{ fill: "white" }}
+          alt="Create offer"
+          title="Create offer"
+        />
+      </Link>
     </div>
   );
 }
