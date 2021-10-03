@@ -22,8 +22,9 @@ function Signup({ history }) {
     reader.readAsDataURL(file);
   };
 
-  const updateDimensions = (dimensions) => {
-    setDimensions(dimensions);
+  const updateDimensions = (newDimensions) => {
+    setDimensions(newDimensions);
+    console.log(dimensions);
     enableCrop(false);
   };
 
