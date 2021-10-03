@@ -66,3 +66,16 @@
   transform: translateY(-210%);
   height: 16px;
 }
+
+.dotMenu {
+  position: absolute;
+  width: 85px;
+  transform: translate(33vw, -92px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 5px 5px 5px 5px;
+  background-color: var(--gray-color);
+}
