@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TopBar.css";
-import Hamburger from "Media/hamburger.png";
+import Hamburger from "Media/hamburger.svg";
 import { ReactComponent as Plus } from "Media/plus.svg";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
@@ -26,6 +26,7 @@ function TopBar({ page }) {
         <Plus
           className="plusIcon"
           style={{ fill: "white" }}
+          // @ts-ignore
           alt="Create offer"
           title="Create offer"
         />

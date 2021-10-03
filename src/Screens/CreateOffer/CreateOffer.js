@@ -18,9 +18,12 @@ function CreateOffer({ history }) {
     data.timestamp = Date.now();
     data.user = JSON.parse(localStorage.getItem("user"))?._id;
 
-    await fetch(`${process.env.REACT_APP_API_BASE_URL}/offers`, {
+    await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/offers`, {
       method: "POST",
       body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     history.push("/");
   };

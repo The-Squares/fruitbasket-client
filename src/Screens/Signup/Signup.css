@@ -1,0 +1,30 @@
+.Signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 100vh;
+}
+
+.Signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Signup form section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.Signup input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}

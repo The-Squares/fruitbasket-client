@@ -7,6 +7,8 @@ import "./App.css";
 import Map from "Screens/Map/MapScreen";
 import CreateOffer from "Screens/CreateOffer/CreateOffer";
 import Offer from "Screens/Offer/Offer";
+import Login from "Screens/Login/Login";
+import Signup from "Screens/Signup/Signup";
 
 function App() {
   return (
@@ -17,8 +19,14 @@ function App() {
         <Route path="/map" exact component={Map} />
         <Route path="/create-offer" exact component={CreateOffer} />
         <Route path="/offers/:offerid" exact component={Offer} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/signup" exact component={Signup} />
       </Switch>
-      <BottomBar></BottomBar>
+      <Route
+        // @ts-ignore
+        path="/(|offers|map|create-offer|/offers/:offerid)"
+        component={BottomBar}
+      />
     </Router>
   );
 }
