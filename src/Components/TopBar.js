@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TopBar.css";
-import Hamburger from "Media/hamburger.svg";
+import { ReactComponent as Hamburger } from "Media/hamburger.svg";
 import { ReactComponent as Plus } from "Media/plus.svg";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
@@ -12,11 +12,15 @@ function TopBar({ page }) {
     <div className="topBar">
       <Sidebar active={sideBarActive} />
       <div className="headerLocation">
-        <img
+        <Hamburger
           className="hamburger"
-          src={Hamburger}
           alt="Sidebar"
           title="Sidebar"
+          style={
+            sideBarActive
+              ? { fill: "#602700", stroke: "#602700" }
+              : { fill: "#E37547", stroke: "#E37547" }
+          }
           onClick={() => setActive(!sideBarActive)}
         />
         <p className="topBarText">{page}</p>
