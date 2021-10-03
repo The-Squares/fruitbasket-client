@@ -14,6 +14,7 @@ function TopBar({ page }) {
       <div className="headerLocation">
         <Hamburger
           className="hamburger"
+          // @ts-ignore
           alt="Sidebar"
           title="Sidebar"
           style={

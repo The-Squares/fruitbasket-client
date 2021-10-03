@@ -14,7 +14,8 @@
 
 .offerBBack .fruitImage {
   flex: 1;
-  height: 50%;
+  width: 10%;
+  max-height: 95px;
   margin-left: 15px;
 }
 
@@ -25,6 +26,9 @@
 
 .offerBBack .offerBText > :first-child {
   text-transform: capitalize;
+  font-size: 100%;
+  max-width: 28vw;
+  word-break: break-all;
 }
 
 .offerBBack .offerBText p {
@@ -33,10 +37,6 @@
   margin: 0;
   font-weight: 700;
   font-size: 11px;
-}
-
-.offerBBack .offerBText .fruitName {
-  font-size: 1.5em;
 }
 
 .offerBBack .offerBButton {
