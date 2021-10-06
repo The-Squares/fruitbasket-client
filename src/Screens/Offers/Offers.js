@@ -19,6 +19,7 @@ function Offers({ history }) {
             fruit_name={offer.fruit_type}
             location={offer.address}
             image_url={offer.picture_url}
+            offer_id={offer._id}
           />
         ))}
       </div>
