@@ -20,6 +20,7 @@ function Offers({ history }) {
             location={offer.address}
             image_url={offer.picture_url}
             offer_id={offer._id}
+            key={offer._id}
           />
         ))}
       </div>

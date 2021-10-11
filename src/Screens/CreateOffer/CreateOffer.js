@@ -17,22 +17,24 @@ function CreateOffer({ history }) {
           <label>
             Price<span>*</span>
           </label>
-          <input data-key="price" type="text" />
+          <input data-key="price" type="number" />
 
           <label>
             Organic<span>*</span>
           </label>
-          <input data-key="organic" type="checkbox" />
+          <div className="organic">
+            <input data-key="organic" type="checkbox" />
+          </div>
 
           <label>
             Number remaining<span>*</span>
           </label>
-          <input data-key="remaining" type="text" />
+          <input data-key="remaining" type="number" />
 
           <label>
             Description<span>*</span>
           </label>
-          <input data-key="description" type="text" />
+          <textarea data-key="description" />
 
           <hr />
 

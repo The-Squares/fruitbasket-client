@@ -6,7 +6,7 @@ import useGeoOffers from "Hooks/useGeoOffers";
 
 const libraries = [];
 
-function Map() {
+function Map({ history }) {
   let [lat, long] = useGeolocation();
   let offers = useGeoOffers(lat, long);
   const { isLoaded, loadError } = useLoadScript({
@@ -39,6 +39,7 @@ function Map() {
                   lat: offer.location.coordinates[1],
                   lng: offer.location.coordinates[0],
                 }}
+                onClick={() => history.push(`/offers/${offer._id}`)}
               ></Marker>
             )
           );
