@@ -4,7 +4,9 @@ import "./SidebarItem.css";
 function SidebarItem({ image, text }) {
   return (
     <div className="SidebarItem">
-      <img src={image} alt="" />
+      <div className="sidebarImage">
+        <img src={image} alt="" />
+      </div>
       <p>{text}</p>
     </div>
   );

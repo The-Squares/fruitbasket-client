@@ -9,6 +9,14 @@
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
+.sidebarImage {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
 .SidebarItem img {
   height: 80%;
 }
