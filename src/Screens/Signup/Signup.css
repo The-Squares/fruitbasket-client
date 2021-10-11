@@ -1,10 +1,14 @@
 .Signup {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
   align-items: center;
   height: 100vh;
+}
+
+.signupHead {
+  font-size: 1.8rem;
 }
 
 .Signup form {
@@ -24,7 +28,67 @@
   gap: 5px;
 }
 
-.Signup input {
+.Signup input:not([type="file"]) {
   font-family: "Roboto", sans-serif;
+  height: 50px;
+  width: 100%;
   font-weight: 400;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fileInput {
+  height: 54px;
+  width: calc(100% + 4px);
+  border-radius: 2px;
+  background-color: white;
+  font-weight: 600;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fileInput > * {
+  width: calc(100% - 4px);
+  margin-left: 4px;
+}
+
+.volunterInput {
+  height: 54px;
+  width: calc(100% + 4px);
+  border-radius: 2px;
+  background-color: white;
+  font-weight: 600;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16vw;
+}
+
+.volunterInput p {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.Signup button {
+  width: calc(100% + 6px);
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--orange-color);
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.signupLink {
+  text-decoration: underline;
+  font-size: 1.3rem;
 }

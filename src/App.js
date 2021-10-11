@@ -24,7 +24,7 @@ function App() {
       </Switch>
       <Route
         // @ts-ignore
-        path="/(|offers|map|create-offer|/offers/:offerid)"
+        path="/(|offers|map|create-offer|/offers/:offerid|settings|seller-profile)"
         component={BottomBar}
       />
     </Router>

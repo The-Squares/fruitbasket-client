@@ -11,10 +11,14 @@ function Sidebar({ active }) {
 
   return (
     <div className="SideBar" style={style}>
-      <SidebarItem image={Offers} text={"Offers"} />
-      <SidebarItem image={SellerProfile} text={"Seller Profile"} />
-      <SidebarItem image={Map} text={"Map"} />
-      <SidebarItem image={Settings} text={"Settings"} />
+      <SidebarItem path="/offers" image={Offers} text={"Offers"} />
+      <SidebarItem
+        path="/seller-profile"
+        image={SellerProfile}
+        text={"Seller Profile"}
+      />
+      <SidebarItem path="/map" image={Map} text={"Map"} />
+      <SidebarItem path="/settings" image={Settings} text={"Settings"} />
     </div>
   );
 }

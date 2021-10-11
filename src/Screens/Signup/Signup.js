@@ -1,12 +1,12 @@
 import ImageCrop from "Components/ImageCrop";
 import React, { useRef, useState } from "react";
+import signUp from "Util/signUp";
 import "./Signup.css";
 
 function Signup({ history }) {
   const [dimensions, setDimensions] = useState({});
   const [cropImage, enableCrop] = useState(false);
   const [imageURL, setImageURL] = useState("");
-
   const imageRef = useRef(null);
 
   const handleUpload = (e) => {
@@ -28,70 +28,33 @@ function Signup({ history }) {
     enableCrop(false);
   };
 
-  const signUp = async (e) => {
-    e.preventDefault();
-    console.log("submitted");
-    let answers = Array.from(e.target)
-      .slice(0, 4)
-      .map((target) => [target.dataset.key, target.value]);
-    console.log(answers);
-    let userData = {};
-    answers.forEach(([key, value]) => {
-      userData[key] = value;
-    });
-    console.log(JSON.stringify(userData));
-
-    let response = await fetch(
-      `${process.env.REACT_APP_API_BASE_URL}/api/users`,
-      {
-        method: "POST",
-        body: JSON.stringify(userData),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    let user = await response.json();
-    console.log(user);
-
-    const formData = new FormData();
-    console.log(imageRef.current.files[0]);
-    formData.append("image", imageRef.current.files[0]);
-
-    await fetch(
-      `${process.env.REACT_APP_API_BASE_URL}/api/users/${user["_id"]}/image`,
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
-
-    localStorage.setItem("user", JSON.stringify(user));
-    history.push("/");
-  };
-
   return (
     <div className="Signup">
-      <form onSubmit={signUp}>
-        <section>
-          <input type="email" data-key="email" placeholder="email..." />
-          <input
-            type="password"
-            data-key="password"
-            placeholder="password..."
-          />
-        </section>
-        <section>
-          <input type="text" data-key="username" placeholder="username..." />
-          <input
-            type="text"
-            data-key="display_name"
-            placeholder="display name..."
-          />
-        </section>
+      <p className="signupHead">Signup</p>
+      <form onSubmit={(e) => signUp(e, imageRef, history)}>
+        <input type="email" data-key="email" placeholder="Email..." />
+        <input type="password" data-key="password" placeholder="Password..." />
+        <input type="text" data-key="username" placeholder="Username..." />
+        <input
+          type="text"
+          data-key="display_name"
+          placeholder="Display name..."
+        />
 
-        <input type="file" onChange={handleUpload} ref={imageRef} />
-        <button type="submit">Submit</button>
+        <div className="fileInput">
+          <p>Profile Picture</p>
+          <input
+            type="file"
+            onChange={handleUpload}
+            ref={imageRef}
+            accept="image/jpeg, image/jpg, image/png"
+          />
+        </div>
+        <div className="volunterInput">
+          <p>Volunteer?</p>
+          <input type="checkbox" />
+        </div>
+        <button type="submit">Sign Up</button>
         {cropImage ? (
           <ImageCrop
             image={imageURL}
@@ -101,7 +64,9 @@ function Signup({ history }) {
           <></>
         )}
       </form>
-      <a href="/login">Login</a>
+      <p className="signupLink" onClick={() => history.push("/login")}>
+        Login
+      </p>
     </div>
   );
 }
