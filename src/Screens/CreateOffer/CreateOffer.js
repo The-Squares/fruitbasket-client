@@ -27,6 +27,13 @@ function CreateOffer({ history }) {
           </div>
 
           <label>
+            Fruit Picture<span>*</span>
+          </label>
+          <div className="fruitPic">
+            <input type="file" accept="image/jpeg, image/jpg, image/png" />
+          </div>
+
+          <label>
             Number remaining<span>*</span>
           </label>
           <input data-key="remaining" type="number" />
