@@ -1,0 +1,133 @@
+.OfferContent {
+  margin-top: calc(8vh + 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.OfferContent img {
+  width: 80vw;
+}
+
+.fruitType {
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+
+.offerDescrip {
+  font-size: 1.1rem;
+  width: 80%;
+  padding: 5%;
+  margin-top: 8px;
+  background-color: var(--yellow-color);
+  border-radius: 5px;
+}
+
+.offerDescrip {
+  width: 70%;
+}
+
+.offerWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.priceWrap {
+  flex: 55;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.offerPrice {
+  background-color: var(--red-color);
+  width: 90%;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.offerPrice span {
+  font-weight: 600;
+}
+
+.offerOrganic {
+  width: 50%;
+  margin-left: 10%;
+  border-radius: 3px;
+  font-weight: 600;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--lightgreen-color);
+}
+
+.offerRemaining {
+  flex: 45;
+  background-color: var(--blue-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.offerRemaining .remaining {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.sellerInfo {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.sellerHead {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-left: 1px;
+}
+
+.sellerMore {
+  background-color: var(--orange-color);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.sellerAddress {
+  margin-top: 10px;
+}
+
+.sellerMore p {
+  margin-left: 10px;
+}
+
+.sellerMore span {
+  font-weight: 600;
+}
+
+.OfferContent > :last-child {
+  margin-bottom: calc(25px + 8vh);
+}

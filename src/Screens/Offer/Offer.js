@@ -2,6 +2,7 @@ import React from "react";
 import "./Offer.css";
 import TopBar from "Components/TopBar";
 import { useParams } from "react-router-dom";
+import OfferContent from "Components/OfferContent";
 
 function Offer({ history }) {
   // @ts-ignore
@@ -9,10 +10,8 @@ function Offer({ history }) {
 
   return (
     <div className="Offer">
-      <TopBar page="Offer" />
-      <div className="offerDetails">
-        <p>{offerid}</p>
-      </div>
+      <TopBar page="Offer"></TopBar>
+      <OfferContent></OfferContent>
     </div>
   );
 }

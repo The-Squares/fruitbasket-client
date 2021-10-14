@@ -4,6 +4,8 @@
   --blue-color: #86a4d4;
   --red-color: #dd4f44;
   --gray-color: #c4c4c4;
+  --yellow-color: #d6b953;
+  --lightgreen-color: #2ecb3c;
 }
 
 body {
@@ -17,4 +19,10 @@ body {
 body p {
   margin: 0;
   padding: 0;
+}
+
+.dropshadow {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
 }
