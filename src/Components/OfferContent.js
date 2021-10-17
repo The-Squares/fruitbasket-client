@@ -1,16 +1,12 @@
 import React from "react";
 import "./OfferContent.css";
-import Apple from "Media/aspectratio.png";
 
-function OfferContent() {
+function OfferContent({ offer }) {
   return (
     <div className="OfferContent">
-      <img src={Apple} alt="" />
-      <p className="fruitType">Apples</p>
-      <div className="offerDescrip dropshadow">
-        Juicy apples grown in an authentic Sonoma CA backyard! Email me for
-        pickup address.
-      </div>
+      <img src={offer.picture_url} alt="" />
+      <p className="fruitType">{offer?.fruit_type}</p>
+      <div className="offerDescrip dropshadow">{offer?.description}</div>
       <div className="offerWrap">
         <div className="priceWrap">
           <div className="offerPrice dropshadow">
@@ -20,7 +16,7 @@ function OfferContent() {
           </div>
           <div className="offerOrganic dropshadow">
             <p>Organic?</p>
-            <p>Yes~!</p>
+            <p>{offer?.organic ? "Yes!" : "No!"}</p>
           </div>
         </div>
         <div className="offerRemaining dropshadow">
@@ -28,17 +24,17 @@ function OfferContent() {
             Quantity <br />
             Remaining
           </p>
-          <p className="remaining">19</p>
+          <p className="remaining">{offer?.remaining}</p>
         </div>
       </div>
       <div className="sellerInfo">
         <p className="sellerHead">Contact Seller</p>
         <div className="sellerMore dropshadow">
           <p className="sellerEmail">
-            Email: <span>camasher22@gmail.com</span>
+            Email: <span>{offer?.user?.email}</span>
           </p>
           <p className="sellerAddress">
-            Address: <span>312 S Crescent Drive</span>
+            Address: <span>{offer?.address}</span>
           </p>
         </div>
       </div>

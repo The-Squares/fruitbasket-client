@@ -1,4 +1,4 @@
-const signUp = async (e, imageRef, history) => {
+const signUp = async (e, imageRef, history, dimensions) => {
   e.preventDefault();
   let answers = Array.from(e.target)
     .slice(0, 4)
@@ -26,6 +26,12 @@ const signUp = async (e, imageRef, history) => {
 
   const formData = new FormData();
   formData.append("image", imageRef.current.files[0]);
+
+  dimensions.top = dimensions.y;
+  dimensions.left = dimensions.x;
+  delete dimensions.x;
+  delete dimensions.y;
+  formData.append("dimensions", JSON.stringify(dimensions));
 
   await fetch(
     `${process.env.REACT_APP_API_BASE_URL}/api/users/${user["_id"]}/image`,

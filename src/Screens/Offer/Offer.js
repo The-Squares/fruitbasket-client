@@ -1,17 +1,16 @@
 import React from "react";
 import "./Offer.css";
 import TopBar from "Components/TopBar";
-import { useParams } from "react-router-dom";
 import OfferContent from "Components/OfferContent";
+import useOffer from "Hooks/useOffer";
 
-function Offer({ history }) {
-  // @ts-ignore
-  let { offerid } = useParams();
+function Offer() {
+  let offer = useOffer();
 
   return (
     <div className="Offer">
       <TopBar page="Offer"></TopBar>
-      <OfferContent></OfferContent>
+      <OfferContent offer={offer}></OfferContent>
     </div>
   );
 }

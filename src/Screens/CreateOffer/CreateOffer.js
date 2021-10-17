@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./CreateOffer.css";
 import TopBar from "Components/TopBar";
 import submitForm from "Util/submitForm";
 
 function CreateOffer({ history }) {
+  const imageRef = useRef(null);
+
   return (
     <div className="CreateOffer">
       <TopBar page="Create Offer" />
       <div className="offerForm">
-        <form onSubmit={(e) => submitForm(e, history)}>
+        <form onSubmit={(e) => submitForm(e, history, imageRef)}>
           <label>
             Fruit Type<span>*</span>
           </label>
@@ -30,7 +32,11 @@ function CreateOffer({ history }) {
             Fruit Picture<span>*</span>
           </label>
           <div className="fruitPic">
-            <input type="file" accept="image/jpeg, image/jpg, image/png" />
+            <input
+              ref={imageRef}
+              type="file"
+              accept="image/jpeg, image/jpg, image/png"
+            />
           </div>
 
           <label>

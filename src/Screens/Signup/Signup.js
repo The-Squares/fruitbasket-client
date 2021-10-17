@@ -31,7 +31,7 @@ function Signup({ history }) {
   return (
     <div className="Signup">
       <p className="signupHead">Signup</p>
-      <form onSubmit={(e) => signUp(e, imageRef, history)}>
+      <form onSubmit={(e) => signUp(e, imageRef, history, dimensions)}>
         <input type="email" data-key="email" placeholder="Email..." />
         <input type="password" data-key="password" placeholder="Password..." />
         <input type="text" data-key="username" placeholder="Username..." />
@@ -54,7 +54,9 @@ function Signup({ history }) {
           <p>Volunteer?</p>
           <input type="checkbox" />
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="signUpButton">
+          Sign Up
+        </button>
         {cropImage ? (
           <ImageCrop
             image={imageURL}
