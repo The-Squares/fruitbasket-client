@@ -51,8 +51,6 @@ function OfferButton({ fruit_name, location, image_url, offer_id }) {
         style={menuActive ? {} : { display: "none" }}
         ref={menuRef}
       >
-        <p>edit</p>
-        <p>delete</p>
         <p onClick={bookmarkOffer}>bookmark</p>
       </div>
     </div>
