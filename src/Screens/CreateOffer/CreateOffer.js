@@ -19,7 +19,7 @@ function CreateOffer({ history }) {
           <label>
             Price<span>*</span>
           </label>
-          <input data-key="price" type="number" />
+          <input data-key="price" type="tel" />
 
           <label>
             Organic<span>*</span>
@@ -42,7 +42,7 @@ function CreateOffer({ history }) {
           <label>
             Number remaining<span>*</span>
           </label>
-          <input data-key="remaining" type="number" />
+          <input data-key="remaining" type="tel" />
 
           <label>
             Description<span>*</span>
