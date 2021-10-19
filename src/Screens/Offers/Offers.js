@@ -3,15 +3,20 @@ import "./Offers.css";
 import OfferButton from "Components/OfferButton";
 import useOffers from "Hooks/useOffers";
 import TopBar from "Components/TopBar";
+import useSearch from "Hooks/useSearch";
 
-function Offers({ history }) {
-  let offers = useOffers();
+function Offers() {
+  let [searchResults, changeTerm] = useSearch();
+  let offers = useOffers(searchResults);
 
   return (
     <div className="Offers">
       <TopBar page="Offers" />
       <div className="offerButtons">
-        <form>
+        <form
+          // @ts-ignore
+          onSubmit={changeTerm}
+        >
           <input type="text" placeholder="Search by fruit name..." />
         </form>
         {offers.map((offer) => (

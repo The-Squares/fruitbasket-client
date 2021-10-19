@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useOffers() {
+function useOffers(override) {
   let [offers, setOffers] = useState([]);
 
   useEffect(() => {
@@ -18,6 +18,11 @@ function useOffers() {
 
     getOffers();
   }, []);
+
+  useEffect(() => {
+    if (override.length === 0) return;
+    setOffers(override);
+  }, [override]);
 
   return offers;
 }
