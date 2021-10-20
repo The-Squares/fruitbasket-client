@@ -3,12 +3,14 @@ import useGeolocation from "Hooks/useGeolocation";
 import "./MapScreen.css";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import useGeoOffers from "Hooks/useGeoOffers";
+import useFoodbanks from "Hooks/useFoodbanks";
 
 const libraries = [];
 
 function Map({ history }) {
   let [lat, long] = useGeolocation();
   let offers = useGeoOffers(lat, long);
+  let foodbanks = useFoodbanks();
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     // @ts-ignore
@@ -40,6 +42,25 @@ function Map({ history }) {
                   lng: offer.location.coordinates[0],
                 }}
                 onClick={() => history.push(`/offers/${offer._id}`)}
+              ></Marker>
+            )
+          );
+        })}
+        {foodbanks.map((foodbank) => {
+          return (
+            foodbank && (
+              <Marker
+                key={`${foodbank.location.coordinates[1]}-${foodbank.location.coordinates[0]}`}
+                position={{
+                  lat: foodbank.location.coordinates[1],
+                  lng: foodbank.location.coordinates[0],
+                }}
+                onClick={() => (window.location.href = foodbank.link)}
+                icon={{
+                  // @ts-ignore
+                  scaledSize: { width: 28, height: 48 },
+                  url: "https://res.cloudinary.com/dbviyopbo/image/upload/v1634687412/Assets/marker_tnk28o.png",
+                }}
               ></Marker>
             )
           );
