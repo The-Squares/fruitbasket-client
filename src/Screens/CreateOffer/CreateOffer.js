@@ -35,7 +35,7 @@ function CreateOffer({ history }) {
             <input
               ref={imageRef}
               type="file"
-              accept="image/jpeg, image/jpg, image/png"
+              accept="image/jpeg, image/jpg, image/png, image/heic"
             />
           </div>
 

@@ -70,11 +70,12 @@
 .dotMenu {
   position: absolute;
   width: 85px;
-  transform: translate(33vw, -92px);
+  transform: translate(32vw, -70px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  min-height: 20px;
   gap: 2px;
   padding: 5px 5px 5px 5px;
   background-color: var(--gray-color);
